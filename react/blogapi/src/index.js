@@ -35,7 +35,7 @@ const routing = (
 				<Route path="/register" component={Register} />
 				<Route path="/login" component={Login} />
 				<Route path="/logout" component={Logout} />
-				<Route path="/post/:slug" component={Single} />
+				<Route path="https://hefnyspace.onrender.com/api/post/:slug" component={Single} />
 				<Route path="/search" component={Search} />
 
 				<Route path="/add-post" component={UserCreate} />

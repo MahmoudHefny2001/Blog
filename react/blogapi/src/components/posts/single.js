@@ -47,6 +47,14 @@ export default function Post() {
 						{data.posts.title}
 					</Typography>
 					<Typography
+						variant="h4"
+						align="center"
+						color="textPrimary"
+						gutterBottom
+					>
+						{data.posts.content}
+					</Typography>
+					<Typography
 						variant="h5"
 						align="center"
 						color="textSecondary"
@@ -63,4 +71,4 @@ export default function Post() {
 			</div>
 		</Container>
 	);
-}
+};
