@@ -34,6 +34,8 @@ INSTALLED_APPS = [
 
     "corsheaders", #
 
+    "whitenoise.runserver_nostatic",  #
+
     'django_filters',   #
 
     'rest_framework',  #
@@ -52,6 +54,9 @@ AUTH_USER_MODEL = 'users.NewUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+
+    "whitenoise.middleware.WhiteNoiseMiddleware",   #
+
     'django.contrib.sessions.middleware.SessionMiddleware',
 
     "corsheaders.middleware.CorsMiddleware",    #
@@ -62,6 +67,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 ROOT_URLCONF = 'core.urls'
 
@@ -211,3 +218,8 @@ SIMPLE_JWT = {
 }
 
 
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+STATIC_ROOT = os.path.join('BASE_DIR', 'staticfiles')
