@@ -20,7 +20,7 @@ SECRET_KEY = 'django-insecure-$2xwsccsiye9q&xxow6ghoetgw+eo)611+q$%6psabily0i8mm
 DEBUG = True
 # DEBUG = bool(os.environ.get('DEBUG', None))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = ['yourdomain.com', '127.0.0.1']
 
 
@@ -123,6 +123,9 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
@@ -158,6 +161,7 @@ REST_FRAMEWORK = {
     
 }
 
+CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000/api/admin/create/']
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",

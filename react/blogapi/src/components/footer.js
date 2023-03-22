@@ -42,7 +42,7 @@ function Copyright() {
 const footers = [
 	{
 		title: 'About',
-		description: ['Developer', 'mail: hefny4@gmail.com'],
+		description: ['Hefny'],
 	},	
 ];
 

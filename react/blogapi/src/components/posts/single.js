@@ -6,6 +6,8 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
+import CardMedia from '@material-ui/core/CardMedia';
+import CardContent from '@material-ui/core/CardContent';
 
 const useStyles = makeStyles((theme) => ({
 	paper: {
@@ -52,6 +54,11 @@ export default function Post() {
 					>
 						{data.posts.excerpt}
 					</Typography>
+					<CardMedia
+						className={classes.cardMedia}
+						image={data.posts.image}
+						title="Image title"
+					/>
 				</Container>
 			</div>
 		</Container>

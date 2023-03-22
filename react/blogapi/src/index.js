@@ -11,10 +11,16 @@ import Login from './components/auth/login';
 import Logout from './components/auth/logout';
 import Single from './components/posts/single';
 import Search from './components/posts/search';
+
 import Admin from './Admin';
 import Create from './components/admin/create';
 import Edit from './components/admin/edit';
 import Delete from './components/admin/delete';
+
+import User from './User';
+import UserCreate from './components/users/create';
+import UserDelete from './components/users/delete';
+import UserEdit from './components/users/edit';
 
 const routing = (
 	<Router>
@@ -31,6 +37,10 @@ const routing = (
 				<Route path="/logout" component={Logout} />
 				<Route path="/post/:slug" component={Single} />
 				<Route path="/search" component={Search} />
+
+				<Route path="/add-post" component={UserCreate} />
+				{/* <Route path="/delete-post" component={UserDelete} /> */}
+				{/* <Route path="/edit-post" component={UserEdit} /> */}
 			</Switch>
 			<Footer />
 		</React.StrictMode>
