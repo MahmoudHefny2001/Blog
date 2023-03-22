@@ -2,11 +2,11 @@ from pathlib import Path
 
 import os
 
-# import dj_database_url
+import dj_database_url
 
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 
-# load_dotenv('.env')
+load_dotenv('.env')
 
 from datetime import timedelta
 
@@ -84,16 +84,16 @@ TEMPLATES = [
 WSGI_APPLICATION = 'core.wsgi.application'
 
 # render postgres db connection
-# DATABASES = {
-    # 'default': dj_database_url.parse(os.environ.get('DATABASE_URL')),
-# }
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL')),
 }
+
+# DATABASES = {
+    # 'default': {
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+    # }
+# }
 
 AUTH_PASSWORD_VALIDATORS = [
     {
