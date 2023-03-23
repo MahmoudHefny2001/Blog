@@ -205,6 +205,8 @@ CORS_ORIGIN_WHITELIST = [
     "https://hefny-space.onrender.com",
 ]
 
+CORS_ALLOW_HEADERS = "access-control-allow-origin"
+
 SESSION_COOKIE_SAMESITE = "None"
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True   
