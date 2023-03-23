@@ -172,6 +172,7 @@ CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000/api/admin/create/']
 
 CORS_ALLOWED_ORIGINS = [
     "https://hefnyspace.ninja",
+    "http://hefnyspace.ninja",
     
     "https://fabulous-queijadas-7295a9.netlify.app",
 
@@ -191,6 +192,7 @@ CORS_ALLOW_HEADERS = "access-control-allow-origin"
 
 CORS_ORIGIN_WHITELIST = [
     "https://hefnyspace.ninja",
+    "http://hefnyspace.ninja",
 
     "https://fabulous-queijadas-7295a9.netlify.app",
 
