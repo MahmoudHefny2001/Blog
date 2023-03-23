@@ -171,6 +171,8 @@ REST_FRAMEWORK = {
 CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000/api/admin/create/']
 
 CORS_ALLOWED_ORIGINS = [
+    "https://fabulous-queijadas-7295a9.netlify.app",
+    
     "http://localhost:3000",
     "http://127.0.0.1:3000",
 
@@ -181,7 +183,6 @@ CORS_ALLOWED_ORIGINS = [
     
     "https://hefny-space.onrender.com",
     
-    "https://fabulous-queijadas-7295a9.netlify.app",
 ]
 
 CORS_ALLOW_METHODS = [
