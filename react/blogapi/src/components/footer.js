@@ -6,6 +6,10 @@ import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 import Box from '@material-ui/core/Box';
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4556935731585940"
+    crossorigin="anonymous">
+</script>
+
 const useStyles = makeStyles((theme) => ({
 	'@global': {
 		ul: {

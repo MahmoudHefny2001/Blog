@@ -10,6 +10,10 @@ import Button from '@material-ui/core/Button';
 import SearchBar from 'material-ui-search-bar';
 import { useHistory } from 'react-router-dom';
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4556935731585940"
+    crossorigin="anonymous">
+</script>
+
 const useStyles = makeStyles((theme) => ({
 	appBar: {
 		borderBottom: `2px solid ${theme.palette.divider}`,

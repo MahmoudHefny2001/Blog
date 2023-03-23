@@ -39,8 +39,8 @@ const routing = (
 				<Route path="/search" component={Search} />
 
 				<Route path="/add-post" component={UserCreate} />
-				{/* <Route path="/delete-post" component={UserDelete} /> */}
-				{/* <Route path="/edit-post" component={UserEdit} /> */}
+				<Route path="/delete-post" component={UserDelete} />
+				<Route path="/edit-post" component={UserEdit} />
 			</Switch>
 			<Footer />
 		</React.StrictMode>
