@@ -180,6 +180,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://192.168.0.222:8080",
     
     "https://hefny-space.onrender.com",
+    
+    "https://fabulous-queijadas-7295a9.netlify.app",
 ]
 
 CORS_ALLOW_METHODS = [
