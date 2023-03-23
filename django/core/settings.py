@@ -185,6 +185,8 @@ CORS_ALLOWED_ORIGINS = [
     
 ]
 
+CORS_ALLOW_HEADERS = "access-control-allow-origin"
+
 CORS_ORIGIN_WHITELIST = [
     "https://fabulous-queijadas-7295a9.netlify.app",
 
