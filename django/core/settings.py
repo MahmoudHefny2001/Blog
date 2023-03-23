@@ -171,6 +171,8 @@ REST_FRAMEWORK = {
 CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000/api/admin/create/']
 
 CORS_ALLOWED_ORIGINS = [
+    "https://hefnyspace.ninja",
+    
     "https://fabulous-queijadas-7295a9.netlify.app",
 
     "http://localhost:3000",
@@ -188,6 +190,8 @@ CORS_ALLOWED_ORIGINS = [
 CORS_ALLOW_HEADERS = "access-control-allow-origin"
 
 CORS_ORIGIN_WHITELIST = [
+    "https://hefnyspace.ninja",
+
     "https://fabulous-queijadas-7295a9.netlify.app",
 
     "http://localhost:3000",
@@ -203,6 +207,7 @@ CORS_ORIGIN_WHITELIST = [
 
 SESSION_COOKIE_SAMESITE = "None"
 CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_ALLOW_ALL = True   
 
 CORS_ALLOW_METHODS = [
     "DELETE",
