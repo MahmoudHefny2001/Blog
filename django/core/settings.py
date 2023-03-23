@@ -172,7 +172,7 @@ CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000/api/admin/create/']
 
 CORS_ALLOWED_ORIGINS = [
     "https://fabulous-queijadas-7295a9.netlify.app",
-    
+
     "http://localhost:3000",
     "http://127.0.0.1:3000",
 
@@ -184,6 +184,23 @@ CORS_ALLOWED_ORIGINS = [
     "https://hefny-space.onrender.com",
     
 ]
+
+CORS_ORIGIN_WHITELIST = [
+    "https://fabulous-queijadas-7295a9.netlify.app",
+
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+
+    "http://localhost:8000",
+    "http://127.0.0.1:8000",
+    "http://localhost:8080",
+    "http://192.168.0.222:8080",
+    
+    "https://hefny-space.onrender.com",
+]
+
+SESSION_COOKIE_SAMESITE = "None"
+CORS_ALLOW_CREDENTIALS = True
 
 CORS_ALLOW_METHODS = [
     "DELETE",
