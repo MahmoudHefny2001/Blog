@@ -168,7 +168,10 @@ REST_FRAMEWORK = {
     
 }
 
-CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000/api/admin/create/']
+CSRF_TRUSTED_ORIGINS = [
+    'http://127.0.0.1:8000/api/admin/create/',
+    'https://hefnyspace.onrender.com',
+]
 
 CORS_ALLOWED_ORIGINS = [
     "https://hefnyspace.ninja",
