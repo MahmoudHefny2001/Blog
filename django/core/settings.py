@@ -201,11 +201,13 @@ CORS_ORIGIN_WHITELIST = [
 
     "http://localhost:8000",
     "http://127.0.0.1:8000",
+    "http://127.0.0.1:8000/api/",
     "http://localhost:8080",
     "http://192.168.0.222:8080",
     
     "https://hefny-space.onrender.com",
     "https://hefnyspace.ninja/",
+    "http://hefnyspace.ninja/"
 ]
 
 CORS_ALLOW_HEADERS = "access-control-allow-origin"
