@@ -11,8 +11,8 @@ urlpatterns = [
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 
-    path('admin/', admin.site.urls),
-    path('hefnyspace.onrender.com/admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
+    path('hefnyspace.onrender.com/admin01010101010101101001/', admin.site.urls),
 
     path('',  include('blog.urls', namespace='blog')),
     
