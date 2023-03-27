@@ -56,8 +56,7 @@ class PostListDetailFilter(generics.ListAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
     filter_backends = [filters.SearchFilter]
-    search_fields = ['^slug', '^title', '^category']
-
+    search_fields = ['^slug', '^title']
 
 
 
