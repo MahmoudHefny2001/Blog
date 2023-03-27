@@ -26,7 +26,6 @@ class PostUserWritePermission(BasePermission):
 class PostViewSet(viewsets.ModelViewSet):
     permission_classes = [PostUserWritePermission]
     serializer_class = PostSerializer
-    # queryset = Post.postobjects.all()
 
     def get_object(self, queryset=None, **kwargs): 
         item = self.kwargs.get('pk')
@@ -57,13 +56,10 @@ class PostListDetailFilter(generics.ListAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
     filter_backends = [filters.SearchFilter]
-    search_fields = ['^slug']
+    search_fields = ['^slug', '^title', '^category']
 
 
-# class CreatePost(generics.CreateAPIView):
-    # permission_classes = [IsAuthenticated]
-    # queryset = Post.objects.all()
-    # serializer_class = PostSerializer
+
 
 class AdminPostDetail(generics.RetrieveAPIView):
     permission_classes = [IsAuthenticated]

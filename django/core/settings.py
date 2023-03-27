@@ -196,6 +196,7 @@ CORS_ALLOW_HEADERS = "access-control-allow-origin"
 
 CORS_ORIGIN_WHITELIST = [
     "https://hefnyspace.ninja",
+    "https://hefnyspace.ninja/login",
     "http://hefnyspace.ninja",
 
     "https://hefnyspace.netlify.app",
