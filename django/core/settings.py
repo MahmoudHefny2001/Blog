@@ -36,7 +36,7 @@ INSTALLED_APPS = [
 
     "whitenoise.runserver_nostatic",  #
 
-    "storages",
+    # "storages",
 
     'django_filters',   #
 
@@ -283,14 +283,14 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join('BASE_DIR', 'staticfiles')
 
 
-AWS_ACCESS_KEY_ID = 'AKIA2JMJJU47X5DTB6W4   '
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'zeet-tf-5422bf57-41a9-40c3-8852-bb43b72ed569'
-
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3ManifestStaticStorage'
+# AWS_ACCESS_KEY_ID = 'AKIA2JMJJU47X5DTB6W4   '
+# AWS_SECRET_ACCESS_KEY = '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'
+# AWS_STORAGE_BUCKET_NAME = 'zeet-tf-5422bf57-41a9-40c3-8852-bb43b72ed569'
+# 
+# AWS_S3_FILE_OVERWRITE = False
+# AWS_DEFAULT_ACL = None
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# 
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3ManifestStaticStorage'
 
 
