@@ -1,10 +1,12 @@
 import axios from 'axios';
 
-const baseURL = 'https://hefnyspace.onrender.com/api/';
+// const baseURL = 'https://hefnyspace.onrender.com/api/';
+
+const baseURL = 'https://kaxc3oyqa2.execute-api.us-west-2.amazonaws.com/api/'
 
 const axiosInstance = axios.create({
 	baseURL: baseURL,
-	timeout: 5000,
+	timeout: 9000,
 	headers: {
 		Authorization: 'Bearer ' + localStorage.getItem('access_token'),
 		'Content-Type': 'application/json',
@@ -14,9 +16,11 @@ const axiosInstance = axios.create({
 
 axiosInstance.interceptors.response.use(
 	(response) => {
+		console.log(response); // Add this line to print the response data
 		return response;
 	},
 	async function (error) {
+		console.log(error.config); // Add this line to print the request data // Rest of the code...
 		const originalRequest = error.config;
 
 		if (typeof error.response === 'undefined') {

@@ -12,7 +12,9 @@ import { useHistory } from 'react-router-dom';
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4556935731585940"
     crossorigin="anonymous">
-</script>
+</script>;
+
+<meta name="google-site-verification" content="BtLXLPyrI7RMesw4N4o6NHZK5925R4bhumxBvAB8O68" />;
 
 const useStyles = makeStyles((theme) => ({
 	appBar: {

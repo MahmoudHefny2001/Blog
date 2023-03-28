@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const baseURL = 'http://127.0.0.1:8000/';
+// const baseURL = 'https://hefnyspace.onrender.com/';
+
+const baseURL = 'https://kaxc3oyqa2.execute-api.us-west-2.amazonaws.com/';
 
 const axiosInstance = axios.create({
     baseURL: baseURL,
