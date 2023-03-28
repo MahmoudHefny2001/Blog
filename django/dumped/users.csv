@@ -1,0 +1,4 @@
+id,password,last_login,is_superuser,email,user_name,first_name,start_date,about,is_staff,is_active
+2,pbkdf2_sha256$390000$AJgc8rM4b5kLCEcrbrutmm$b5XyRzmCB7JuG98wgLGVrsheXlE64Tw0lRBoOL01p5E=,,f,am7-eldawly@mail.com,am7,"",2023-03-22 18:49:59.458928+00,"",f,t
+3,pbkdf2_sha256$390000$ROVrZib0PR4sOGVPUnBdYV$U02Lv0EvU8kRGwYq4b/9rfAcoKa14PFSio6YNCNdaiw=,,f,anauser@mail.com,anauser,"",2023-03-23 19:30:08.368027+00,"",f,t
+1,pbkdf2_sha256$390000$D2LhaQ542lz18FFh8hmGQv$eX/fFSir++hkDKHGinz5WKZp6WFz8W1OJwiv496ehtU=,2023-03-26 23:22:37.460423+00,t,hefny4@gmail.com,Hefny,Mahmoud,2023-03-22 17:34:49.870311+00,"",t,t

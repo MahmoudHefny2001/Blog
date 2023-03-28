@@ -91,9 +91,9 @@ TEMPLATES = [
 WSGI_APPLICATION = 'core.wsgi.application'
 
 # render postgres db connection
-DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL')),
-}
+# DATABASES = {
+#     'default': dj_database_url.parse(os.environ.get('DATABASE_URL')),
+# }
 
 # DATABASES = {
     # 'default': {
@@ -101,6 +101,21 @@ DATABASES = {
         # 'NAME': BASE_DIR / 'db.sqlite3',
     # }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        # 'DATABASE_URL': os.environ.get('DATABASE_URL'),
+        'NAME': os.environ.get('DATABASE_NAME'),
+        'USER': os.environ.get('DATABASE_USER'),
+        'PASSWORD': os.environ.get('DATABASE_PASSWORD'),
+        'HOST': os.environ.get('DATABASE_HOST'),
+        'PORT': os.environ.get('DATABASE_PORT'),
+        # 'TEST': {
+        #     'NAME': '',
+        # },
+    }
+}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
