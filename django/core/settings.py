@@ -187,6 +187,8 @@ CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:8000/api/admin/create/',
     'https://hefnyspace.onrender.com',
     "https://hefnyspace.ninja",
+
+    'https://kaxc3oyqa2.execute-api.us-west-2.amazonaws.com/',
 ]
 
 CORS_ALLOWED_ORIGINS = [
@@ -205,6 +207,7 @@ CORS_ALLOWED_ORIGINS = [
     
     "https://hefny-space.onrender.com",
     
+    "https://kaxc3oyqa2.execute-api.us-west-2.amazonaws.com/",
 ]
 
 CORS_ALLOW_HEADERS = "access-control-allow-origin"
@@ -228,6 +231,8 @@ CORS_ORIGIN_WHITELIST = [
     "https://hefny-space.onrender.com",
     "https://hefnyspace.ninja/",
     "http://hefnyspace.ninja/"
+
+    "https://kaxc3oyqa2.execute-api.us-west-2.amazonaws.com/",
 ]
 
 CORS_ALLOW_HEADERS = "access-control-allow-origin"
