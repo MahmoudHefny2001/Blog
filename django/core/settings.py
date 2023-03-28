@@ -138,11 +138,7 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_L10N = True
-
 USE_TZ = True
-
-SESSION_COOKIE_DOMAIN = None
 
 
 STATIC_URL = 'static/'
@@ -188,19 +184,12 @@ REST_FRAMEWORK = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-
-    "http://127.0.0.1:8000/",
-
     'http://127.0.0.1:8000/api/admin/create/',
     'https://hefnyspace.onrender.com',
     "https://hefnyspace.ninja",
-
-    'https://kaxc3oyqa2.execute-api.us-west-2.amazonaws.com',
 ]
 
 CORS_ALLOWED_ORIGINS = [
-
-
     "https://hefnyspace.ninja",
     "http://hefnyspace.ninja",
 
@@ -216,9 +205,7 @@ CORS_ALLOWED_ORIGINS = [
     
     "https://hefny-space.onrender.com",
     
-    "https://kaxc3oyqa2.execute-api.us-west-2.amazonaws.com",
-
-]   
+]
 
 CORS_ALLOW_HEADERS = "access-control-allow-origin"
 
@@ -241,8 +228,6 @@ CORS_ORIGIN_WHITELIST = [
     "https://hefny-space.onrender.com",
     "https://hefnyspace.ninja/",
     "http://hefnyspace.ninja/"
-
-    "https://kaxc3oyqa2.execute-api.us-west-2.amazonaws.com",
 ]
 
 CORS_ALLOW_HEADERS = "access-control-allow-origin"
@@ -288,18 +273,9 @@ SIMPLE_JWT = {
     'TOKEN_TYPE_CLAIM': 'token_type',
 }
 
-# AWS_S3_CUSTOM_DOMAIN = '%s.https://kaxc3oyqa2.execute-api.us-west-2.amazonaws.com' 
-# AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
-# AWS_LOCATION = 'static'
 
-# STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
-
-
-STATIC_URL = 'https/static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 STATIC_ROOT = os.path.join('BASE_DIR', 'staticfiles')
-
-
-
