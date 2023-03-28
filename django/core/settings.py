@@ -138,7 +138,11 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
+USE_L10N = True
+
 USE_TZ = True
+
+SESSION_COOKIE_DOMAIN = None
 
 
 STATIC_URL = 'static/'
@@ -184,6 +188,9 @@ REST_FRAMEWORK = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
+
+    "http://127.0.0.1:8000/",
+
     'http://127.0.0.1:8000/api/admin/create/',
     'https://hefnyspace.onrender.com',
     "https://hefnyspace.ninja",
@@ -192,6 +199,8 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
+
+
     "https://hefnyspace.ninja",
     "http://hefnyspace.ninja",
 
@@ -208,7 +217,8 @@ CORS_ALLOWED_ORIGINS = [
     "https://hefny-space.onrender.com",
     
     "https://kaxc3oyqa2.execute-api.us-west-2.amazonaws.com",
-]
+
+]   
 
 CORS_ALLOW_HEADERS = "access-control-allow-origin"
 
@@ -284,3 +294,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 STATIC_ROOT = os.path.join('BASE_DIR', 'staticfiles')
+
+SECURE_SSL_REDIRECT = True
+
+
