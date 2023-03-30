@@ -143,12 +143,12 @@ USE_I18N = True
 USE_TZ = True
 
 
-STATIC_URL = 'static/'
+# STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-# MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 
 REST_FRAMEWORK = {
@@ -230,11 +230,13 @@ CORS_ORIGIN_WHITELIST = [
     "https://hefny-space.onrender.com",
     "https://hefnyspace.ninja/",
     "http://hefnyspace.ninja/"
+
+    "http://127.0.0.1:8000/admin/",
 ]
 
 CORS_ALLOW_HEADERS = "access-control-allow-origin"
 
-SESSION_COOKIE_SAMESITE = "None"
+# SESSION_COOKIE_SAMESITE = "None"
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True   
 
@@ -276,35 +278,43 @@ SIMPLE_JWT = {
 }
 
 
-# STATIC_URL = '/static/'
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'static')
-# ]
-# STATIC_ROOT = os.path.join('BASE_DIR', 'staticfiles')
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+STATIC_ROOT = os.path.join('BASE_DIR', 'staticfiles')
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),] # new
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # new
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage' # new
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' # new
 
 
-
-AWS_ACCESS_KEY_ID = 'AKIA2JMJJU477BVELN62'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'zeet-tf-5422bf57-41a9-40c3-8852-bb43b72ed569'
-
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3ManifestStaticStorage'
+# STORAGES = {"default": "storages.backends.s3boto3.S3Boto3Storage"}
+# STORAGES = {"staticfiles": "storages.backends.s3boto3.S3StaticStorage"}
+# STORAGES = {"staticfiles": "storages.backends.s3boto3.S3ManifestStaticStorage"}
 
 
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
-AWS_DEFAULT_ACL = 'public-read'
+# AWS_ACCESS_KEY_ID = 'AKIA2JMJJU47X5DTB6W4'
+# AWS_SECRET_ACCESS_KEY = '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'
+# AWS_STORAGE_BUCKET_NAME = 'zeet-tf-5422bf57-41a9-40c3-8852-bb43b72ed569'
+# AWS_S3_REGION_NAME = "us-west-2"
+# AWS_S3_FILE_OVERWRITE = False
+# AWS_DEFAULT_ACL = None
+# AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
+# AWS_DEFAULT_ACL = 'public-read'
 
-AWS_LOCATION = 'static'
-# STATICFILES_DIRS = [
-    # os.path.join(BASE_DIR, 'static'),
-# ]
+# AWS_LOCATION = 'static'
 
-STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
-DEFAULT_FILE_STORAGE = 'core.storages.MediaStore'
-
+# # s3 static settings
+# AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+# STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# # 
+# # s3 public media settings
+# # PUBLIC_MEDIA_LOCATION = 'media'
+# MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
+ 
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 

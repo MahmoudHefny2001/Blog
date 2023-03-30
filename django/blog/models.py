@@ -14,6 +14,9 @@ class Category(models.Model):
         return self.name
     
 
+def image_directory_path(instance, filename):
+    return 'posts/{0}/{1}'.format(instance.id, filename)
+
 class Post(models.Model):
 
     class PostObjects(models.Manager):
