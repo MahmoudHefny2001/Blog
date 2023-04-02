@@ -2,7 +2,9 @@ import axios from 'axios';
 
 // const baseURL = 'https://hefnyspace.onrender.com/api/';
 
-const baseURL = 'https://kaxc3oyqa2.execute-api.us-west-2.amazonaws.com/api/'
+// const baseURL = 'https://kaxc3oyqa2.execute-api.us-west-2.amazonaws.com/api/'
+
+const baseURL = 'https://hefny-blog.up.railway.app/api/'
 
 const axiosInstance = axios.create({
 	baseURL: baseURL,

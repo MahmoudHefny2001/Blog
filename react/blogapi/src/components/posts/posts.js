@@ -73,7 +73,8 @@ const Posts = () => {
     const fetchData = async () => {
       try {
         // const response = await fetch(`https://hefnyspace.onrender.com/api/`,
-        const response = await fetch(`https://kaxc3oyqa2.execute-api.us-west-2.amazonaws.com/api/`,
+        // const response = await fetch(`https://kaxc3oyqa2.execute-api.us-west-2.amazonaws.com/api/`,
+        const response = await fetch(`https://hefny-blog.up.railway.app/api/`,
       
         );
         const data = await response.json();
