@@ -93,9 +93,9 @@ TEMPLATES = [
 WSGI_APPLICATION = 'core.wsgi.application'
 
 # render postgres db connection
-# DATABASES = {
-#     'default': dj_database_url.parse(os.environ.get('DATABASE_URL')),
-# }
+#DATABASES = {
+#    'default': dj_database_url.parse(os.environ.get('DATABASE_URL')),
+#}
 
 # DATABASES = {
     # 'default': {
@@ -284,11 +284,6 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = os.path.join('BASE_DIR', 'staticfiles')
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),] # new
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # new
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage' # new
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' # new
 
 
 # STORAGES = {"default": "storages.backends.s3boto3.S3Boto3Storage"}
