@@ -11,7 +11,8 @@ WORKDIR /blog
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
     libpq-dev \
-    gcc
+    gcc \
+    && apt-get clean
 
 # Add the current directory contents into the container at /blog
 COPY . /blog/
@@ -25,4 +26,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8000
 
 # Apply database migrations and collect static files
-CMD ["sh", "./entrypoint.sh"]
+ENTRYPOINT ["sh", "./entrypoint.sh"]

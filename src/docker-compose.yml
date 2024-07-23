@@ -1,27 +1,33 @@
-  version: '3.9'
+version: '3.9'
 
-  services:
-    db:
-      image: postgres:13
-      volumes:
-        - ./data/db:/var/lib/postgresql/data/
-      environment:
-        POSTGRES_DB: blog
-        POSTGRES_USER: postgres
-        POSTGRES_PASSWORD: MA7MOUD7EFNY
-      ports:
-        - "5432:5432"
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: blog
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: MA7MOUD7EFNY
+      POSTGRES_PORT: 5432
+    ports:
+      - "5433:5432"
 
-    web:
-      build: .
-      command: python manage.py runserver 0.0.0.0:8000
-      volumes:
-        - .:/blog
-      ports:
-        - "8000:8000"
-      depends_on:
-        - db
-      environment:
-        DJANGO_SECRET_KEY: django-insecure-so45_%wl6v6aqw2%ibx2jbn^!2ixfb+o=-lj5ax9tmrn=dbkk$
-        DJANGO_DEBUG: 'True'
-        DATABASE_URL: postgres://postgres:MA7MOUD7EFNY@db:5432/blog
+  web:
+    build: .
+    command: gunicorn server.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - .:/blog
+    ports:
+      - "8000:8000"
+    environment:
+      DJANGO_SECRET_KEY: django-insecure-so45_%wl6v6aqw2%ibx2jbn^!2ixfb+o=-lj5ax9tmrn=dbkk$
+      DJANGO_DEBUG: 'True'
+      DATABASE_NAME: blog
+      DATABASE_USER: postgres
+      DATABASE_PASSWORD: MA7MOUD7EFNY
+      DATABASE_HOST: db
+      DATABASE_PORT: 5432
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
