@@ -4,12 +4,13 @@
     db:
       image: postgres:13
       volumes:
-        - postgres_data:/var/lib/postgresql/data/
+        - ./data/db:/var/lib/postgresql/data/
       environment:
         POSTGRES_DB: blog
         POSTGRES_USER: postgres
         POSTGRES_PASSWORD: MA7MOUD7EFNY
-        POSTGRES_PORT: 5432
+      ports:
+        - "5432:5432"
 
     web:
       build: .
@@ -24,10 +25,3 @@
         DJANGO_SECRET_KEY: django-insecure-so45_%wl6v6aqw2%ibx2jbn^!2ixfb+o=-lj5ax9tmrn=dbkk$
         DJANGO_DEBUG: 'True'
         DATABASE_URL: postgres://postgres:MA7MOUD7EFNY@db:5432/blog
-
-  volumes:
-    postgres_data:
-      driver_opts:
-        type: none
-        device: /media/hefny/0E9C460C9C45EEB1
-        o: bind
