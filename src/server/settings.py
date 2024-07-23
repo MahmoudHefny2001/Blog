@@ -13,10 +13,7 @@ from datetime import timedelta
 
 SECRET_KEY = os.environ.get("SECRET_KEY", None)
 
-DEBUG = os.environ.get("DEBUG", False)
-
-if DEBUG:
-    DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = list(str(os.environ.get("ALLOWED_HOSTS")).split(", "))
 
