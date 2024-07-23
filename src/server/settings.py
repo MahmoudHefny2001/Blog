@@ -15,11 +15,14 @@ SECRET_KEY = os.environ.get("SECRET_KEY", None)
 
 DEBUG = os.environ.get("DEBUG", False)
 
+if DEBUG:
+    DEBUG = False
+
 ALLOWED_HOSTS = list(str(os.environ.get("ALLOWED_HOSTS")).split(", "))
 
 
 INSTALLED_APPS = [
-
+    'rest_framework_swagger', #
     'drf_yasg', #
 
     'django.contrib.admin',
@@ -157,6 +160,11 @@ USE_I18N = True
 USE_TZ = True
 
 
+# STATIC_URL = 'static/'
+
+# production
 STATIC_URL = 'static/'
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

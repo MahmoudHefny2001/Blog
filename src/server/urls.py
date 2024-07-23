@@ -31,4 +31,9 @@ urlpatterns = [
     path('api/v1/', include('blogs.urls')),
 
     path('api-documentation/', schema_view.with_ui('swagger', cache_timeout=0),name='schema-swagger-ui'), #
-]
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+urlpatterns += [re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT})]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
