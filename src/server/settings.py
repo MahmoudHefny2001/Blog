@@ -180,6 +180,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*",
+    "http://*",
+    "http://localhost:3000",
+    "http://localhost:8000",
+    "http://localhost:8080",
+    "http://localhost:8001",
+    "http://localhost:8002",
+    "http://localhost:8003",
+    "http://localhost:8004",
 ]
 
 
@@ -191,6 +199,8 @@ CORS_ALLOW_ORIGINS = [
 
 CORS_ALLOWED_ORIGINS = [
     'https://*',
+    "http://*",
+
 ]
 
 CORS_ALLOW_METHODS = [
@@ -217,6 +227,17 @@ CORS_ALLOW_HEADERS = [
     'dnt',
     'origin',
 ]
+
+CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_HTTPONLY = True
+
+# Security settings
+SECURE_SSL_REDIRECT = True
+SECURE_HSTS_SECONDS = 3600
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
 
 # SWAGGER_SETTINGS
 SWAGGER_SETTINGS = {
