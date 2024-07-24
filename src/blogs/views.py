@@ -20,8 +20,8 @@ class BlogViewSet(ModelViewSet):
     authentication_classes = [TokenAuthentication]
 
     def get_permissions(self):
-        if self.action in SAFE_METHODS:
-            return [AllowAny()]
+        if self.action == 'list' or self.action == 'retrieve':
+            return [AllowAny(),]
         else:
             return [
                 IsAuthenticated(), 
