@@ -5,8 +5,8 @@ from .models import Blog
 class BlogSerializer(serializers.ModelSerializer):
     class Meta:
         model = Blog
-        # fields = '__all__'
-        exclude = ['modified']
+        fields = '__all__'
+        # exclude = ['modified']
         read_only_fields = ['user']
     
 
