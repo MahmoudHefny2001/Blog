@@ -217,3 +217,14 @@ CORS_ALLOW_HEADERS = [
     'dnt',
     'origin',
 ]
+
+# SWAGGER_SETTINGS
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'Token': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header'
+        }
+    },
+}
