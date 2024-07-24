@@ -179,6 +179,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 
 CSRF_TRUSTED_ORIGINS = [
+    "http://*.",
+    "http://localhost:8000",
+    "http://localhost:8083",
+    "http://localhost:3000",
+    "http://127.0.0.1:3001",
+    "http://127.0.0.1:5000",
     "https://*",
     "http://*",
     "http://localhost:3000",
@@ -195,6 +201,11 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOW_ORIGINS = [
     "*",
+    "http://localhost:8083",
+    "http://localhost:3000",
+    "http://localhost:8000",
+    "http://127.0.0.1:3001",
+    "http://127.0.0.1:5000",
 ]
 
 CORS_ALLOWED_ORIGINS = [
@@ -249,3 +260,6 @@ SWAGGER_SETTINGS = {
         }
     },
 }
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SESSION_COOKIE_SECURE = True

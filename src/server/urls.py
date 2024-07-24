@@ -30,7 +30,7 @@ urlpatterns = [
 
     path('api/v1/', include('blogs.urls')),
 
-    path('api-documentation/', schema_view.with_ui('swagger', cache_timeout=0),name='schema-swagger-ui'), #
+    path('api-documentation/', schema_view.with_ui('swagger', cache_timeout=5),name='schema-swagger-ui'), #
     
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
